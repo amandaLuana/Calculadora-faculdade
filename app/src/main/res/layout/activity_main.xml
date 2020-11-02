@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="#C4C4C4"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="acEvent"
+        android:text="C"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiplicar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <Button
+        android:id="@+id/btnSete"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="7"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnOito"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancel" />
+
+    <Button
+        android:id="@+id/btnOito"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="8"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnNove"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSete"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiplicar" />
+
+    <Button
+        android:id="@+id/btnSomar"
+        android:layout_width="70dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="operatorEvent"
+        android:text="+"
+        android:textSize="30sp"
+        app:backgroundTint="#5D4BB9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNove"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtrair" />
+
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="70dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="equalEvent"
+        android:text="="
+        android:textSize="30sp"
+        app:backgroundTint="#FFC103"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnTres"
+        app:layout_constraintTop_toBottomOf="@+id/btnSomar" />
+
+    <Button
+        android:id="@+id/btnUm"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="1"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnDois"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNove3" />
+
+    <Button
+        android:id="@+id/btnZero"
+        android:layout_width="167dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="0"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnPonto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUm" />
+
+    <Button
+        android:id="@+id/btnPonto"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="."
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnIgual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnZero"
+        app:layout_constraintTop_toBottomOf="@+id/btnTres" />
+
+    <Button
+        android:id="@+id/btnTres"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="3"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnIgual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDois"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeis" />
+
+    <Button
+        android:id="@+id/btnDois"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="2"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnTres"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnUm"
+        app:layout_constraintTop_toBottomOf="@+id/btnCinco" />
+
+    <Button
+        android:id="@+id/btnNove"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="9"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnSomar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnOito"
+        app:layout_constraintTop_toBottomOf="@+id/btnDividir" />
+
+    <Button
+        android:id="@+id/btnNove3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnCinco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSete"
+        tools:text="4" />
+
+    <Button
+        android:id="@+id/btnQuatro"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="4"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnCinco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSete" />
+
+    <Button
+        android:id="@+id/btnCinco"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="5"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnSeis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNove3"
+        app:layout_constraintTop_toBottomOf="@+id/btnOito" />
+
+    <Button
+        android:id="@+id/btnSeis"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="numberEvent"
+        android:text="6"
+        android:textSize="30sp"
+        app:backgroundTint="@color/color_btn"
+        app:layout_constraintEnd_toStartOf="@+id/btnSomar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCinco"
+        app:layout_constraintTop_toBottomOf="@+id/btnNove" />
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:background="#5D4BB9"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="operatorEvent"
+        android:text="*"
+        android:textSize="30sp"
+        app:backgroundTint="#5D4BB9"
+        app:layout_constraintEnd_toStartOf="@+id/btnDividir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="operatorEvent"
+        android:text="/"
+        android:textSize="30sp"
+        app:backgroundTint="#5D4BB9"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtrair"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMultiplicar"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <Button
+        android:id="@+id/btnSubtrair"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="operatorEvent"
+        android:text="-"
+        android:textSize="30sp"
+        app:backgroundTint="#5D4BB9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDividir"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
